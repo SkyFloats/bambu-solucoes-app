@@ -1,10 +1,8 @@
 import React from 'react';
 import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
-import { Link } from 'expo-router';
 
 import * as Animatable from 'react-native-animatable';
-export default function Login(){
-
+export default function Register(){
     return (
         <View style={styles.container}>
             <Animatable.Image 
@@ -15,26 +13,18 @@ export default function Login(){
             resizeMode='contain'/>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-                <TextInput placeholder="ID do arquiteto" placeholderTextColor={'#FFFFFF'} style={styles.input}/>
+                <TextInput placeholder="ID" placeholderTextColor={'#FFFFFF'} style={styles.input}/>
+
+                <TextInput placeholder="E-mail" placeholderTextColor={'#FFFFFF'} style={styles.input}/>
 
                 <TextInput placeholder="Senha" placeholderTextColor={'#FFFFFF'} style={styles.input}/>
 
-                <Link href={'/projects/projetosHome'}  style={styles.button} asChild>
-                    <TouchableOpacity> 
-                            <Text style={styles.buttonText}>Log in</Text>
-                    </TouchableOpacity> 
-                </Link>
+                <TextInput placeholder="Confirme a senha" placeholderTextColor={'#FFFFFF'} style={styles.input}/>
 
-                <Link href='./esqueci' style={styles.buttonEsqueceu}>
-                    <TouchableOpacity> 
-                        <Text style={styles.esqueceuText}>Esqueceu a{'\n'}senha?</Text>
-                    </TouchableOpacity>
-                </Link>
-                <Link style={styles.buttonRegister} href='./register' asChild>
-                <TouchableOpacity> 
-                        <Text style={styles.registerText}>Registrar-se{'\n'}no bambu</Text>
-                </TouchableOpacity> 
-                </Link>
+                <TouchableOpacity style={styles.button}>
+                    <Text style={styles.buttonText}>Cadastrar</Text>
+                </TouchableOpacity>
+
             </Animatable.View>
         </View>
     );
@@ -77,19 +67,4 @@ const styles = StyleSheet.create({
         color: '#3A5340',
         fontSize: 24,
     },
-    esqueceuText:{
-        fontSize: 13,
-        color: '#FFFFFF',
-        textAlign:'center',
-    },
-    registerText:{
-        fontSize:13,
-        color: '#FFFFFF',
-        textDecorationLine:'underline',
-        textAlign:'center',
-    },
-    buttonRegister:{
-        position: 'absolute',
-        bottom: '15%',
-    }
 })
