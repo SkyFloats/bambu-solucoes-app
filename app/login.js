@@ -5,6 +5,7 @@ import { Link } from 'expo-router';
 import * as Animatable from 'react-native-animatable';
 export default function Login(){
 
+    
     return (
         <View style={styles.container}>
             <Animatable.Image 

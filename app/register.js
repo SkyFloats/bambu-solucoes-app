@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native'
 import { Link } from 'expo-router';
 
 import * as Animatable from 'react-native-animatable';
+
 export default function Register(){
     return (
         <View style={styles.container}>
