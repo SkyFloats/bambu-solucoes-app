@@ -1,16 +1,15 @@
 import React from 'react';
 import {Image, View, Text, StyleSheet,TouchableOpacity} from 'react-native';
-import { Header } from 'react-native/Libraries/NewAppScreen';
 
 export default function ProjetosHome(){
     return (
         <View style={styles.container}>
                 <View style={styles.cabecalho}>
-                    <Image source={require('../../assets/iconLogo.png')}/> 
+                    <Image source={require('../../assets/images/iconLogo.png')}/> 
                     <Text style={styles.namePage}>Projetos</Text>   
                 </View>
                 <Image 
-                source={require('../../assets/iconLogo.png')}
+                source={require('../../assets/images/iconLogo.png')}
                 style={styles.containerImage} 
                 resizeMode='contain'/>
 
@@ -19,7 +18,7 @@ export default function ProjetosHome(){
                 <Text style={styles.infoText}>Adicionar um {'\n'}novo projeto</Text>
 
                 <TouchableOpacity style={styles.button}>
-                    <Image source={require('../../assets/iconAdd.png')}/>
+                    <Image source={require('../../assets/images/iconAdd.png')}/>
                 </TouchableOpacity>
 
         </View>
@@ -64,7 +63,5 @@ const styles = StyleSheet.create({
     button:{
         alignSelf:'center',
         marginBottom:'10%',
-
-    },
-   
+    },   
 });

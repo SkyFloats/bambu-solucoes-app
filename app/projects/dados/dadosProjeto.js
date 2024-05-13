@@ -1,14 +1,14 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 
-export default function App() {
+export default function DadosProjeto() {
 
   return (  
     <View style={styles.container}>
 
         <View style={styles.cabecalho}>
           <Image 
-          source={require('./assets/SetaVoltar.png')}
+          source={require('../../../assets/images/SetaVoltar.png')}
           style={styles.imagem}/>
           <Text style={styles.namePage}>Dados do projeto</Text>   
         </View>

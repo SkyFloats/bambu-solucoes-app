@@ -8,7 +8,7 @@ export default function DadosCliente() {
 
         <View style={styles.cabecalho}>
           <Image 
-          source={require('./assets/SetaVoltar.png')}
+          source={require('../../../assets/images/SetaVoltar.png')}
           style={styles.imagem}/>
           <Text style={styles.namePage}>Dados do Cliente</Text>   
         </View>

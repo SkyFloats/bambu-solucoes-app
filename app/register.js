@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
+import { Link } from 'expo-router';
 
 import * as Animatable from 'react-native-animatable';
 export default function Register(){
@@ -9,7 +10,7 @@ export default function Register(){
             animation="fadeInLeft" 
             delay={500} 
             style={styles.containerImage} 
-            source={require('../assets/logo.png')}
+            source={require('../assets/images/logo.png')}
             resizeMode='contain'/>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
@@ -20,11 +21,11 @@ export default function Register(){
                 <TextInput placeholder="Senha" placeholderTextColor={'#FFFFFF'} style={styles.input}/>
 
                 <TextInput placeholder="Confirme a senha" placeholderTextColor={'#FFFFFF'} style={styles.input}/>
-
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Cadastrar</Text>
-                </TouchableOpacity>
-
+                <Link style={styles.button} href={'./login'} asChild>
+                    <TouchableOpacity>
+                        <Text style={styles.buttonText}>Cadastrar</Text>
+                    </TouchableOpacity>
+                </Link>
             </Animatable.View>
         </View>
     );

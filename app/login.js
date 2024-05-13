@@ -1,17 +1,20 @@
 import React from 'react';
 import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import { Link } from 'expo-router';
+import { useFonts } from 'expo-font';
 
 import * as Animatable from 'react-native-animatable';
 export default function Login(){
-
+    const [fontsLoaded] = useFonts({
+        'LexendTera_Regular': require('../assets/fonts/LexendTera-Regular.ttf'),
+      });
     return (
         <View style={styles.container}>
             <Animatable.Image 
             animation="fadeInLeft" 
             delay={500} 
             style={styles.containerImage} 
-            source={require('../assets/logo.png')}
+            source={require('../assets/images/logo.png')}
             resizeMode='contain'/>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
@@ -25,12 +28,12 @@ export default function Login(){
                     </TouchableOpacity> 
                 </Link>
 
-                <Link href='./esqueci' style={styles.buttonEsqueceu}>
+                <Link href={'./esqueci'} style={styles.buttonEsqueceu}>
                     <TouchableOpacity> 
                         <Text style={styles.esqueceuText}>Esqueceu a{'\n'}senha?</Text>
                     </TouchableOpacity>
                 </Link>
-                <Link style={styles.buttonRegister} href='./register' asChild>
+                <Link style={styles.buttonRegister} href={'./register'} asChild>
                 <TouchableOpacity> 
                         <Text style={styles.registerText}>Registrar-se{'\n'}no bambu</Text>
                 </TouchableOpacity> 
@@ -76,6 +79,7 @@ const styles = StyleSheet.create({
     buttonText:{
         color: '#3A5340',
         fontSize: 24,
+        fontFamily: 'LexendTera-Regular',
     },
     esqueceuText:{
         fontSize: 13,
