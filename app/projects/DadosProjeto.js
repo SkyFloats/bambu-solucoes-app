@@ -22,7 +22,7 @@ export default function App() {
         <Text style={styles.orcamentoText}>Orçamento*</Text>  
       <TextInput placeholder="Orçamento inicial" placeholderTextColor={'#FFFFFF'} style={[styles.input]}/>
 
-      <Link style={styles.buttonText} href='./InformacoesAvancadas' asChild>
+      <Link style={styles.buttonText} href='../information/InformacoesAvancadas' asChild>
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}> Salvar e {'\n'} cotinuar </Text>
           </TouchableOpacity>
