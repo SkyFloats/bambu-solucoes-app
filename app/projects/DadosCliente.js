@@ -9,16 +9,28 @@ export default function DadosCliente() {
     <View style={styles.container}>
       
         <Text style={styles.nomeText} >Nome*</Text>     
-      <TextInput placeholder="Nome do cliente" placeholderTextColor={'#FFFFFF'} style={[styles.input]}/>
+      <TextInput 
+      placeholder="Nome do cliente" 
+      placeholderTextColor={'#FFFFFF'} 
+      style={[styles.input]}/>
 
         <Text style={styles.enderecoText}>Endereço*</Text>  
-      <TextInput placeholder="Endereço do cliente" placeholderTextColor={'#FFFFFF'} style={[styles.input]}/>
+      <TextInput 
+      placeholder="Endereço do cliente" 
+      placeholderTextColor={'#FFFFFF'} 
+      style={[styles.input]}/>
       
         <Text style={styles.telefoneText}>Telefone*</Text>  
-      <TextInput placeholder="Telefone do cliente" placeholderTextColor={'#FFFFFF'} style={[styles.input]}/>
+      <TextInput 
+      placeholder="Telefone do cliente" 
+      placeholderTextColor={'#FFFFFF'} 
+      style={[styles.input]}/>
 
         <Text style={styles.emailText}>Email*</Text>  
-      <TextInput placeholder="Email do cliente" placeholderTextColor={'#FFFFFF'} style={[styles.input]}/>
+      <TextInput 
+      placeholder="Email do cliente" 
+      placeholderTextColor={'#FFFFFF'} 
+      style={[styles.input]}/>
 
       <Link style={styles.buttonText} href='./DadosProjeto' asChild>
           <TouchableOpacity style={styles.button}>

@@ -8,22 +8,38 @@ export default function App() {
     <View style={styles.container}>
       
         <Text style={styles.títuloText} >Título do projeto*</Text>     
-      <TextInput placeholder="Título do projeto" placeholderTextColor={'#FFFFFF'} style={[styles.input]}/>
+      <TextInput 
+      placeholder="Título do projeto" 
+      placeholderTextColor={'#FFFFFF'} 
+      style={[styles.input]}/>
 
         <Text style={styles.enderecoText}>Endereço*</Text>  
-      <TextInput placeholder="Endereço do projeto" placeholderTextColor={'#FFFFFF'} style={[styles.input]}/>
+      <TextInput 
+      placeholder="Endereço do projeto" 
+      placeholderTextColor={'#FFFFFF'} 
+      style={[styles.input]}/>
       
         <Text style={styles.tipoText}>Tipo de construção*</Text>  
-      <TextInput placeholder="Resid. Comerc. Indust." placeholderTextColor={'#FFFFFF'} style={[styles.input]}/>
+      <TextInput 
+      placeholder="Resid. Comerc. Indust." 
+      placeholderTextColor={'#FFFFFF'} 
+      style={[styles.input]}/>
 
         <Text style={styles.tamanhoText}>Tamanho da construção*</Text>  
-      <TextInput placeholder="Em m²cliente" placeholderTextColor={'#FFFFFF'} style={[styles.input]}/>
+      <TextInput 
+      placeholder="Em m²cliente" 
+      placeholderTextColor={'#FFFFFF'} 
+      style={[styles.input]}/>
       
         <Text style={styles.orcamentoText}>Orçamento*</Text>  
-      <TextInput placeholder="Orçamento inicial" placeholderTextColor={'#FFFFFF'} style={[styles.input]}/>
+      <TextInput 
+      placeholder="Orçamento inicial" 
+      placeholderTextColor={'#FFFFFF'} 
+      style={[styles.input]}/>
 
       <Link style={styles.buttonText} href='./InformacoesAvancadas' asChild>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity 
+          style={styles.button}>
             <Text style={styles.buttonText}> Salvar e {'\n'} cotinuar </Text>
           </TouchableOpacity>
       </Link>    

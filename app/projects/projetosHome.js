@@ -12,7 +12,7 @@ export default function ProjetosHome(){
                     <Text style={styles.namePage}>Projetos</Text>   
                 </View>
                 <Image 
-                source={require('../../assets/iconLogo.png')}
+                source={require('../../assets/Elipse.png')}
                 style={styles.containerImage} 
                 resizeMode='contain'/>
 
@@ -49,13 +49,11 @@ const styles = StyleSheet.create({
     },
     containerImage:{
         alignSelf:'center',
-        marginTop: '8%',
-        marginBottom: '15%',
+        marginTop: '35%',
+        marginBottom: '30%',
         justifyContent:'center',
         flex:1,
-        backgroundColor: '#728056',
-        borderRadius: 50,
-        paddingTop: 20,
+        maxHeight: '15%',
     },
     mainText:{
         color: '#728056',
@@ -66,11 +64,13 @@ const styles = StyleSheet.create({
         color: '#728056',
         fontSize: 20,
         textAlign:'center',
-        marginTop: '10%',
+        marginTop: '5%',
+        marginBottom:'5%',
     },
     button:{
         alignSelf:'center',
         marginBottom:'10%',
+        maxHeight:'8%',
     },
    
 });
