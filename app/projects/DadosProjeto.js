@@ -37,9 +37,8 @@ export default function App() {
       placeholderTextColor={'#FFFFFF'} 
       style={[styles.input]}/>
 
-      <Link style={styles.buttonText} href='./InformacoesAvancadas' asChild>
-          <TouchableOpacity 
-          style={styles.button}>
+      <Link style={styles.buttonText} href='../information/InformacoesAvancadas' asChild>
+          <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}> Salvar e {'\n'} cotinuar </Text>
           </TouchableOpacity>
       </Link>    

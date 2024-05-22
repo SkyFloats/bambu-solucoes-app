@@ -1,6 +1,5 @@
 import React from "react";
 import {View, Text, Image, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
-import { Header } from 'react-native/Libraries/NewAppScreen';
 import { Link } from "expo-router";
 
 export default function AdvancedInfo() {

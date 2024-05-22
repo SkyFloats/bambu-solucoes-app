@@ -3,9 +3,8 @@ import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native'
 import { Link } from 'expo-router';
 
 import * as Animatable from 'react-native-animatable';
-export default function Login(){
 
-    
+export default function Login(){
     return (
         <View style={styles.container}>
             <Animatable.Image 
