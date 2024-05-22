@@ -11,7 +11,7 @@ const AgendaScreen = () => {
     'D', 'S', 'T', 'Q', 'Q', 'S', 'S',
     '28', '29', '30', '1', '2', '3', '4',
     '5', '6', '7', '8', '9', '10', '11',
-    // Add the rest of the days of the month here
+    // Add the rest of the days of the month here 
   ];
 
   return (
