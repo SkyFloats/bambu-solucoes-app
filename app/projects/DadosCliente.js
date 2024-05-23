@@ -2,7 +2,6 @@ import React from 'react';
 import {View, Text, Image, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import { Link } from 'expo-router';
 
-
 export default function DadosCliente() {
 
   return (  

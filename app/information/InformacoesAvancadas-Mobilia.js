@@ -88,6 +88,7 @@ const MultiSelectChips = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    backgroundColor: '#eeeeee',
   },
   header: {
     fontSize: 20,

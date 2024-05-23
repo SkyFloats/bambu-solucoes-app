@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     backgroundColor:'#EEEEEE',
+    left: 10,
 },
   input:{
     borderRadius: 20,
