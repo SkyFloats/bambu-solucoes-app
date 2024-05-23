@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import { Link } from "expo-router";
+import CORES from '../../constants/cores' ;
 
 const furnitureTypes = [
   'Rústica',
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginVertical: 10,
-    color: '#3A5340',
+    color: CORES.secundaria,
   },
   grid: {
     justifyContent: 'center',
@@ -114,14 +115,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
   },
   selectedChip: {
-    backgroundColor: '#3A5340',
-    borderColor: '#3A5340',
+    backgroundColor: CORES.secundaria,
+    borderColor: CORES.secundaria,
   },
   chipText: {
     color: '#000',
   },
   selectedChipText: {
-    color: '#fff',
+    color: CORES.branco,
   },
   shadow: {
     elevation: 5,
@@ -130,7 +131,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   selectedChipText: {
-    color: '#fff',
+    color: CORES.branco,
   },
   roomItem: {
     flexDirection: 'row',
@@ -139,20 +140,20 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 7,
     marginBottom: 12,
-    backgroundColor: '#ffffff',
+    backgroundColor: CORES.branco,
     elevation: 5,
   },
   roomItemText: {
     fontSize: 18,
-    color: '#3A5340',
+    color: CORES.secundaria,
   },
   arrow: {
     fontSize: 25,
-    color: '#3A5340',
+    color: CORES.secundaria,
   },
   buttonText: {
-    backgroundColor: '#fff',
-    color: '#3A5340',
+    backgroundColor: CORES.branco,
+    color: CORES.secundaria,
     width: 180,
     height: 45,
     borderRadius:5,

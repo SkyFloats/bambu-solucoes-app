@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Link } from "expo-router";
+import CORES from '../../constants/cores' ;
 
 const roomItems = [
   'Itens Sala - Chão',
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
   card: {
     width: '95%',
     height: '80%',
-    backgroundColor: '#728056',
+    backgroundColor: CORES.principal,
     borderRadius: 10,
     padding: 15,
     marginBottom: 130,
@@ -74,7 +75,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 20,
     right: 20,
-    backgroundColor: '#fff',
+    backgroundColor: CORES.branco,
     width: 180,
     height: 45,
     borderRadius: 5,
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: '#3A5340',
+    color: CORES.secundaria,
     textAlign: 'center',
   },
 });

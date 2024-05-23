@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import { Link } from 'expo-router';
+import CORES from '../constants/cores' ;
+import Botao from '../components/Botao';
 
 import * as Animatable from 'react-native-animatable';
 
@@ -15,9 +17,9 @@ export default function Login(){
             resizeMode='contain'/>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-                <TextInput placeholder="E-mail" placeholderTextColor={'#FFFFFF'} style={styles.input}/>
+                <TextInput placeholder="E-mail" placeholderTextColor={CORES.branco} style={styles.input}/>
 
-                <TextInput placeholder="Senha" placeholderTextColor={'#FFFFFF'} style={styles.input}/>
+                <TextInput placeholder="Senha" placeholderTextColor={CORES.branco} style={styles.input}/>
 
                 <Link href={'/projects/projetosHome'}  style={styles.button} asChild>
                     <TouchableOpacity> 
@@ -43,7 +45,7 @@ export default function Login(){
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:'#728056',
+        backgroundColor:CORES.principal,
     },
     containerImage:{
         alignSelf:'center',
@@ -58,15 +60,15 @@ const styles = StyleSheet.create({
     },
     input:{
         borderBottomWidth: 1,
-        borderColor: '#FFFFFF',
+        borderColor: CORES.branco,
         height: 40,
         marginBottom:12,
         fontSize: 16,
         width: '70%',
-        color: '#fff'
+        color: CORES.branco
     },
     button:{
-        backgroundColor: '#FFFFFF',
+        backgroundColor: CORES.branco,
         width: '70%',
         borderRadius:20,
         marginTop:'30%',
@@ -75,17 +77,17 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     buttonText:{
-        color: '#3A5340',
+        color: CORES.secundaria,
         fontSize: 24,
     },
     esqueceuText:{
         fontSize: 13,
-        color: '#FFFFFF',
+        color: CORES.branco,
         textAlign:'center',
     },
     registerText:{
         fontSize:13,
-        color: '#FFFFFF',
+        color: CORES.branco,
         textDecorationLine:'underline',
         textAlign:'center',
     },

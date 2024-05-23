@@ -1,6 +1,7 @@
 import { Link } from 'expo-router';
 import React from 'react';
 import { Image, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import CORES from '../../constants/cores' ;
 
 export default function ProjetosHome() {
     return (
@@ -37,10 +38,10 @@ export default function ProjetosHome() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFFFFF',
+        backgroundColor: CORES.branco,
     },
     cabecalho: {
-        backgroundColor: '#3A5340',
+        backgroundColor: CORES.secundaria,
         flexDirection: 'row',
         alignItems: 'center',
         paddingTop: 5,
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
     namePage: {
         flex: 1,
         fontSize: 25,
-        color: '#fff',
+        color: CORES.branco,
         marginLeft: 10,
     },
     circleContainer: {
@@ -57,12 +58,12 @@ const styles = StyleSheet.create({
     },
     outerCircle: {
         borderWidth: 3,
-        borderColor: '#728056',
+        borderColor: CORES.principal,
         borderRadius: 100,
         padding: 5,
     },
     innerCircle: {
-        backgroundColor: '#728056',
+        backgroundColor: CORES.principal,
         borderRadius: 100,
         padding: 10,
     },
@@ -71,20 +72,20 @@ const styles = StyleSheet.create({
         height: 100,
     },
     mainText: {
-        color: '#728056',
+        color: CORES.principal,
         fontSize: 26,
         textAlign: 'center',
         marginTop: 20,
     },
     infoText: {
-        color: '#728056',
+        color: CORES.principal,
         fontSize: 20,
         textAlign: 'center',
         marginTop: 10,
     },
     button: {
         alignSelf: 'center',
-        marginTop: 60,
+        marginTop: 40,
     },
 
 });

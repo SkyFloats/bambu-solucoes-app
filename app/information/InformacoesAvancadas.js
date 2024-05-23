@@ -1,6 +1,7 @@
 import React from "react";
 import {View, Text, Image, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import { Link } from "expo-router";
+import CORES from '../../constants/cores' ;
 
 export default function AdvancedInfo() {
 
@@ -49,21 +50,21 @@ const styles = StyleSheet.create({
 textoA: {
     fontSize: 18,
     padding: 20,
-    color: '#3A5340',
+    color: CORES.principal,
 },
 buttonTexta: {
     textAlign: 'center',
-    backgroundColor: '#728056',
+    backgroundColor: CORES.principal,
     padding: 20,
     fontSize: 20,
     marginLeft: 20,
     marginRight: 20,
     marginTop: 10,
-    color: '#fff',
+    color: CORES.branco,
 }, 
 buttonText: {
-  backgroundColor: '#fff',
-  color: '#3A5340',
+  backgroundColor: CORES.branco,
+  color: CORES.secundaria,
   width: 180,
   height: 45,
   borderRadius:5,
