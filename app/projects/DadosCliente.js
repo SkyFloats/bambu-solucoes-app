@@ -3,7 +3,6 @@ import {View, Text, Image, StyleSheet, TextInput, TouchableOpacity} from 'react-
 import { Link } from 'expo-router';
 import CORES from '../../constants/cores' ;
 
-
 export default function DadosCliente() {
 
   return (  
