@@ -5,7 +5,13 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+      "expo-font",
+      {
+        "fonts": ["./assets/fonts/LexendTera-Regular.ttf"]
+      }
+    ]
     ],
     "name": "bambu-solucoes-app",
     "slug": "bambu-solucoes-app"

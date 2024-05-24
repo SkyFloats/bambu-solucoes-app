@@ -23,7 +23,7 @@ const GreenCardScreen = () => {
         {roomItems.map((item, index) => renderRoomItem(item, index))}
       </View>
 
-      <Link style={styles.buttonText} href='./agendaHome' asChild>
+      <Link style={styles.buttonText} href='./MarcarAgenda' asChild>
         <TouchableOpacity style={styles.button}>
           <Text> Salvar e {'\n'} cotinuar </Text>
         </TouchableOpacity>

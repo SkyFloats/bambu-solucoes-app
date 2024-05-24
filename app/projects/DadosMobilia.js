@@ -76,7 +76,7 @@ const MultiSelectChips = () => {
         keyExtractor={(item) => item}
         contentContainerStyle={styles.roomItemsContainer}
       />
-        <Link style={styles.buttonText} href='./InformacoesAvancada-Mobilia-Sala' asChild>
+        <Link style={styles.buttonText} href='./DadosMobiliaSala' asChild>
             <TouchableOpacity style={styles.button}>
                 <Text> Salvar e {'\n'} cotinuar </Text>
             </TouchableOpacity>
@@ -158,12 +158,13 @@ const styles = StyleSheet.create({
     width: 180,
     height: 45,
     borderRadius:5,
-    marginTop:'50%',
+    marginTop:'20%',
     marginLeft: '50%',
     paddingBottom: 0,
     justifyContent: 'center',
     alignItems: 'center',
   }
+  
 });
 
 export default MultiSelectChips;

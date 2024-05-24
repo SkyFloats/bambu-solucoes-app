@@ -11,25 +11,25 @@ export default function DadosCliente() {
         <Text style={styles.nomeText} >Nome*</Text>     
       <TextInput 
       placeholder="Nome do cliente" 
-      placeholderTextColor={'#FFFFFF'} 
+      placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
 
         <Text style={styles.enderecoText}>Endereço*</Text>  
       <TextInput 
       placeholder="Endereço do cliente" 
-      placeholderTextColor={'#FFFFFF'} 
+      placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
       
         <Text style={styles.telefoneText}>Telefone*</Text>  
       <TextInput 
       placeholder="Telefone do cliente" 
-      placeholderTextColor={'#FFFFFF'} 
+      placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
 
         <Text style={styles.emailText}>Email*</Text>  
       <TextInput 
       placeholder="Email do cliente" 
-      placeholderTextColor={'#FFFFFF'} 
+      placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
 
       <Link style={styles.buttonText} href='./DadosProjeto' asChild>
@@ -41,7 +41,7 @@ export default function DadosCliente() {
     </View>
     
   );
-}
+};
 
 
 const styles = StyleSheet.create({
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
 },
   input:{
     borderRadius: 20,
-    backgroundColor: '#728056',
-    color: '#fff',
+    backgroundColor: CORES.principal,
+    color: CORES.branco,
     height: 40,
     marginTop: 5,
     marginBottom:12,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 }, 
  cabecalho:{
   position: 'relative',
-   backgroundColor: '#3A5340',
+   backgroundColor: CORES.secundaria,
    flexDirection:'row',
    alig:'center',
    height: '10%'
@@ -79,12 +79,12 @@ imagem: {
 namePage:{
   flex: 1,
   fontSize: 25,
-  color:'#fff',
+  color:CORES.branco,
   marginTop: '11%',
   marginLeft: ''
 },
 button:{
-  backgroundColor: '#FFFFFF',
+  backgroundColor: CORES.branco,
   width: '40%',
   borderRadius:5,
   marginTop:'10%',
@@ -95,25 +95,25 @@ button:{
 },
 nomeText: {
   fontWeight: 'bold',
-  color: '#4F4F4F',
+  color: CORES.cinza,
   marginTop: 5,
   marginLeft: '2%' 
 },
 enderecoText: {
   fontWeight: 'bold',
-  color: '#4F4F4F',
+  color: CORES.cinza,
   marginTop: 5,
   marginLeft: '2%'
 },
 telefoneText: {
   fontWeight: 'bold',
-  color: '#4F4F4F',
+  color: CORES.cinza,
   marginTop: 5,
   marginLeft: '2%'
 },
 emailText: {
   fontWeight: 'bold',
-  color: '#4F4F4F',
+  color: CORES.cinza,
   marginTop: 5,
   marginLeft: '2%'
 }

@@ -11,34 +11,34 @@ export default function App() {
         <Text style={styles.títuloText} >Título do projeto*</Text>     
       <TextInput 
       placeholder="Título do projeto" 
-      placeholderTextColor={'#FFFFFF'} 
+      placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
 
         <Text style={styles.enderecoText}>Endereço*</Text>  
       <TextInput 
       placeholder="Endereço do projeto" 
-      placeholderTextColor={'#FFFFFF'} 
+      placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
       
         <Text style={styles.tipoText}>Tipo de construção*</Text>  
       <TextInput 
       placeholder="Resid. Comerc. Indust." 
-      placeholderTextColor={'#FFFFFF'} 
+      placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
 
         <Text style={styles.tamanhoText}>Tamanho da construção*</Text>  
       <TextInput 
       placeholder="Em m²cliente" 
-      placeholderTextColor={'#FFFFFF'} 
+      placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
       
         <Text style={styles.orcamentoText}>Orçamento*</Text>  
       <TextInput 
       placeholder="Orçamento inicial" 
-      placeholderTextColor={'#FFFFFF'} 
+      placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
 
-      <Link style={styles.buttonText} href='../information/InformacoesAvancadas' asChild>
+      <Link style={styles.buttonText} href='./DadosAmbiente' asChild>
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}> Salvar e {'\n'} cotinuar </Text>
           </TouchableOpacity>
@@ -47,7 +47,7 @@ export default function App() {
     </View>
     
   );
-}
+};
 
 
 const styles = StyleSheet.create({
@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
 },
   input:{
     borderRadius: 20,
-    backgroundColor: '#728056',
-    color: '#fff',
+    backgroundColor: CORES.principal,
+    color: CORES.branco,
     height: 40,
     marginTop: 5,
     marginBottom:12,
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
 }, 
  cabecalho:{
   position: 'relative',
-   backgroundColor: '#3A5340',
+   backgroundColor: CORES.secundaria,
    flexDirection:'row',
    alig:'center',
    height: '10%'
@@ -86,12 +86,12 @@ imagem: {
 namePage:{
   flex: 1,
   fontSize: 25,
-  color:'#fff',
+  color:CORES.branco,
   marginTop: '11%',
   marginLeft: ''
 },
 button:{
-  backgroundColor: '#FFFFFF',
+  backgroundColor: CORES.branco,
   width: '40%',
   borderRadius:5,
   marginTop:'10%',
@@ -102,31 +102,31 @@ button:{
 },
 títuloText: {
   fontWeight: 'bold',
-  color: '#4F4F4F',
+  color: CORES.cinza,
   marginTop: 5,
   marginLeft: '2%' 
 },
 enderecoText: {
   fontWeight: 'bold',
-  color: '#4F4F4F',
+  color: CORES.cinza,
   marginTop: 5,
   marginLeft: '2%'
 },
 tipoText: {
   fontWeight: 'bold',
-  color: '#4F4F4F',
+  color: CORES.cinza,
   marginTop: 5,
   marginLeft: '2%'
 },
 tamanhoText: {
   fontWeight: 'bold',
-  color: '#4F4F4F',
+  color: CORES.cinza,
   marginTop: 5,
   marginLeft: '2%'
 },
 orcamentoText: {
   fontWeight: 'bold',
-  color: '#4F4F4F',
+  color: CORES.cinza,
   marginTop: 5,
   marginLeft: '2%'
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import { Link } from 'expo-router';
 import CORES from '../constants/cores' ;
@@ -20,9 +20,14 @@ export default function Register(){
 
                 <TextInput placeholder="E-mail" placeholderTextColor={CORES.branco} style={styles.input}/>
 
-                <TextInput placeholder="Senha" placeholderTextColor={CORES.branco} style={styles.input}/>
-
-                <TextInput placeholder="Confirme a senha" placeholderTextColor={CORES.branco} style={styles.input}/>
+                <TextInput placeholder="Digite a sua senha" placeholderTextColor={CORES.branco} 
+                style={styles.input}
+                secureTextEntry
+                />
+            
+                <TextInput placeholder="Confirme a senha" placeholderTextColor={CORES.branco} 
+                style={styles.input}
+                secureTextEntry/>
 
             <Link style={styles.buttonText} href='./login' asChild>
                 <TouchableOpacity style={styles.button}>
@@ -50,6 +55,7 @@ const styles = StyleSheet.create({
     containerForm:{
         flex: 4,
         alignItems:'center',
+        width: '100%',
     },
     input:{
         borderBottomWidth: 1,
@@ -58,6 +64,8 @@ const styles = StyleSheet.create({
         marginBottom:12,
         fontSize: 16,
         width: '70%',
+        paddingRight:40,
+        color: CORES.branco,
     },
     button:{
         backgroundColor: CORES.branco,
@@ -72,4 +80,4 @@ const styles = StyleSheet.create({
         color: CORES.secundaria,
         fontSize: 24,
     },
-})
+});
