@@ -1,8 +1,8 @@
-import { Link } from 'expo-router';
+import { Link} from 'expo-router';
 import React from 'react';
 import { Image, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import CORES from '../../constants/cores' ;
-
+//import { fontFamily } from '../../assets/fonts/font-family';
 export default function ProjetosHome() {
     return (
         <View style={styles.container}>
@@ -22,15 +22,21 @@ export default function ProjetosHome() {
                 </View>
             </View>
 
-            <Text style={styles.mainText}>Não existem projetos no  {'\n'} momento</Text>
+            <Text style={styles.mainText}>Não existem projetos no{'\n'}momento</Text>
 
-            <Text style={styles.infoText}>Adicionar um {'\n'}novo projeto</Text>
-
-            <Link style={styles.buttonText} href='./DadosCliente' asChild>
-                <TouchableOpacity style={styles.button}>
-                    <Image source={require('../../assets/iconAdd.png')} />
-                </TouchableOpacity>
-            </Link>
+            <Text style={styles.infoText}>Adicionar um{'\n'}novo projeto</Text>
+            <View style={styles.BotoesTemporarios}>
+                <Link style={styles.buttonText} href='./DadosCliente' asChild>
+                    <TouchableOpacity style={styles.button}>
+                        <Image style={styles.plus} source={require('../../assets/iconAdd.png')} />
+                    </TouchableOpacity>
+                </Link>
+                <Link style={styles.buttonText} href='./HomeComProjetos' asChild>
+                    <TouchableOpacity style={styles.button}>
+                        <Image style={styles.plus} source={require('../../assets/iconAdd.png')} />
+                    </TouchableOpacity>
+                </Link>
+            </View>
         </View>
     );
 };
@@ -51,10 +57,11 @@ const styles = StyleSheet.create({
         fontSize: 25,
         color: CORES.branco,
         marginLeft: 10,
+        //fontFamily: fontFamily.heading,
     },
     circleContainer: {
         alignItems: 'center',
-        marginTop: 200,
+        marginTop: '25%',
     },
     outerCircle: {
         borderWidth: 3,
@@ -73,19 +80,28 @@ const styles = StyleSheet.create({
     },
     mainText: {
         color: CORES.principal,
-        fontSize: 26,
+        fontSize: 20,
         textAlign: 'center',
         marginTop: 20,
+        //fontFamily: fontFamily.subtitle,
     },
     infoText: {
         color: CORES.principal,
-        fontSize: 20,
+        fontSize: 16,
         textAlign: 'center',
         marginTop: 10,
+        //fontFamily: fontFamily.body
     },
     button: {
         alignSelf: 'center',
-        marginTop: 40,
+        marginTop: "25%",
     },
-
+    plus:{
+        width: 80,
+        height: 80,
+    },
+    BotoesTemporarios:{
+        flexDirection:"row" ,
+        justifyContent:"space-evenly"
+    },
 });

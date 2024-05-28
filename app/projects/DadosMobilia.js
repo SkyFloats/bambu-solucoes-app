@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
-import { Link } from "expo-router";
+import { Link, Stack } from "expo-router";
 import CORES from '../../constants/cores' ;
 
 const furnitureTypes = [
@@ -16,10 +16,10 @@ const furnitureTypes = [
 ];
 
 const roomItems = [
-  'Itens Sala',
-  'Itens Quarto',
-  'Itens Cozinha',
-  'Itens Antessala',
+  { name: 'Itens Sala', link: './DadosMobiliaSalaChao' },
+  { name: 'Itens Quarto', link: './ItensQuarto' },
+  { name: 'Itens Cozinha', link: './ItensCozinha' },
+  { name: 'Itens Antessala', link: './ItensAntessala' },
 ];
 
 const MultiSelectChips = () => {
@@ -52,14 +52,17 @@ const MultiSelectChips = () => {
   );
 
   const renderRoomItem = ({ item }) => (
-    <TouchableOpacity style={styles.roomItem}>
-      <Text style={styles.roomItemText}>{item}</Text>
-      <Text style={styles.arrow}> {'\>'} </Text>
-    </TouchableOpacity>
+    <Link href={item.link} asChild>
+      <TouchableOpacity style={styles.roomItem}>
+        <Text style={styles.roomItemText}>{item.name}</Text>
+        <Text style={styles.arrow}> {'\>'} </Text>
+      </TouchableOpacity>
+    </Link>
   );
 
   return (
     <View style={styles.container}>
+      <Stack.Screen options={{ title: "Dados da Mobilia" }} />
       <Text style={styles.header}>- Tipo da mobília</Text>
       <FlatList
         data={furnitureTypes}
@@ -73,7 +76,7 @@ const MultiSelectChips = () => {
       <FlatList
         data={roomItems}
         renderItem={renderRoomItem}
-        keyExtractor={(item) => item}
+        keyExtractor={(item) => item.name}
         contentContainerStyle={styles.roomItemsContainer}
       />
         <Link style={styles.buttonText} href='./DadosMobiliaSala' asChild>
@@ -81,7 +84,6 @@ const MultiSelectChips = () => {
                 <Text> Salvar e {'\n'} cotinuar </Text>
             </TouchableOpacity>
         </Link> 
-
     </View>
   );
 };
@@ -90,6 +92,7 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     backgroundColor: '#eeeeee',
+    height: '100%',
   },
   header: {
     fontSize: 20,
@@ -113,23 +116,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     margin: 1,
     alignItems: 'center',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: CORES.branco,
   },
   selectedChip: {
     backgroundColor: CORES.secundaria,
     borderColor: CORES.secundaria,
   },
   chipText: {
-    color: '#000',
+    color: CORES.preto,
   },
   selectedChipText: {
     color: CORES.branco,
   },
   shadow: {
-    elevation: 5,
+    elevation: 6,
   },
   roomItemsContainer: {
-    marginTop: 20,
+    marginTop: 10,
   },
   selectedChipText: {
     color: CORES.branco,

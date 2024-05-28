@@ -1,13 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { Link } from 'expo-router';
 
 const AgendaScreen = () => {
-  // Sample data for the current month and year
   const month = 'Julho';
   const year = 2020;
 
-  // Sample data for the days of the month
   const daysOfMonth = [
     '28', '29', '30', '1', '2', '3', '4',
     '5', '6', '7', '8', '9', '10', '11',

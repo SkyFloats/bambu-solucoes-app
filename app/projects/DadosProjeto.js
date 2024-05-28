@@ -1,46 +1,46 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
-import { Link } from 'expo-router';
+import { Link, Stack } from 'expo-router';
 import CORES from '../../constants/cores' ;
+//import { fontFamily } from '../../assets/fonts/font-family';
 
 export default function App() {
-
   return (  
     <View style={styles.container}>
-      
-        <Text style={styles.títuloText} >Título do projeto*</Text>     
+      <Stack.Screen options={{ title: "Dados do Projeto" }} />
+        <Text style={styles.text} >Título do projeto*</Text>     
       <TextInput 
       placeholder="Título do projeto" 
       placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
 
-        <Text style={styles.enderecoText}>Endereço*</Text>  
+        <Text style={styles.text}>Endereço*</Text>  
       <TextInput 
       placeholder="Endereço do projeto" 
       placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
       
-        <Text style={styles.tipoText}>Tipo de construção*</Text>  
+        <Text style={styles.text}>Tipo de construção*</Text>  
       <TextInput 
       placeholder="Resid. Comerc. Indust." 
       placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
 
-        <Text style={styles.tamanhoText}>Tamanho da construção*</Text>  
+        <Text style={styles.text}>Tamanho da construção*</Text>  
       <TextInput 
       placeholder="Em m²cliente" 
       placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
       
-        <Text style={styles.orcamentoText}>Orçamento*</Text>  
+        <Text style={styles.text}>Orçamento*</Text>  
       <TextInput 
       placeholder="Orçamento inicial" 
       placeholderTextColor={CORES.branco} 
       style={[styles.input]}/>
 
-      <Link style={styles.buttonText} href='./DadosAmbiente' asChild>
+      <Link style={styles.text} href='./DadosAmbiente' asChild>
           <TouchableOpacity style={styles.button}>
-            <Text style={styles.buttonText}> Salvar e {'\n'} cotinuar </Text>
+            <Text style={styles.text}> Salvar e {'\n'} cotinuar </Text>
           </TouchableOpacity>
       </Link>    
 
@@ -54,10 +54,10 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     backgroundColor:'#EEEEEE',
-    left: 10,
+    left: 15,
 },
   input:{
-    borderRadius: 20,
+    borderRadius: 10,
     backgroundColor: CORES.principal,
     color: CORES.branco,
     height: 40,
@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
     marginLeft: '2%',
     paddingLeft: 10,
     fontSize: 16,
-    width: '90%'
+    width: '90%',
+    //fontFamily: fontFamily.body,
 }, 
  cabecalho:{
   position: 'relative',
@@ -100,7 +101,7 @@ button:{
   justifyContent: 'center',
   alignItems: 'center',
 },
-títuloText: {
+text: {
   fontWeight: 'bold',
   color: CORES.cinza,
   marginTop: 5,

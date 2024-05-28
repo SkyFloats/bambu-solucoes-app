@@ -18,8 +18,10 @@ export default function Login() {
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
                 <TextInput 
                     placeholder="E-mail" 
-                    placeholderTextColor={CORES.branco} 
+                    placeholderTextColor={CORES.branco}
                     style={styles.input}
+                    keyboardType="email-address"
+                    autoCapitalize="none"
                 />
 
                 <TextInput 
@@ -72,36 +74,41 @@ const styles = StyleSheet.create({
         borderColor: CORES.branco,
         height: 40,
         marginBottom: 12,
-        fontSize: 16,
+        fontSize: 14,
         width: '70%',
         color: CORES.branco,
+        //fontFamily: fontFamily.body,
+        padding: 8,
     },
     button: {
         backgroundColor: CORES.branco,
         width: '70%',
         borderRadius: 20,
         marginTop: '30%',
-        paddingBottom: 6,
+        paddingVertical: 10,
         justifyContent: 'center',
         alignItems: 'center',
     },
     buttonText: {
         color: CORES.secundaria,
         fontSize: 24,
+        //fontFamily: fontFamily.subtitle,
     },
     buttonEsqueceu: {
         marginTop: 20,
     },
     esqueceuText: {
-        fontSize: 13,
+        fontSize: 12,
         color: CORES.branco,
         textAlign: 'center',
+        //fontFamily: fontFamily.body,
     },
     registerText: {
-        fontSize: 13,
+        fontSize: 12,
         color: CORES.branco,
         textDecorationLine: 'underline',
         textAlign: 'center',
+        //fontFamily: fontFamily.body,
     },
     buttonRegister: {
         position: 'absolute',

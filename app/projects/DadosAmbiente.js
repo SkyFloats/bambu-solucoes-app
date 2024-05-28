@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { Link } from "expo-router";
+import { Link, Stack } from "expo-router";
 import CORES from '../../constants/cores';
 import Checkbox from 'expo-checkbox';
 
@@ -16,6 +16,7 @@ export default function AdvancedInfo() {
 
     return (
         <View style={styles.container}>
+            <Stack.Screen options={{ title: "Dados do Ambiente" }} />
             <View>
                 <TouchableOpacity style={styles.buttonA}>
                     <Text style={styles.buttonTextA}>CARACTERÍSTICAS DO PROJETO</Text>
@@ -112,6 +113,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#eeeeee',
         paddingHorizontal: 20,
+        top: 10,
     },
     row: {
         flexDirection: 'row',
@@ -129,9 +131,10 @@ const styles = StyleSheet.create({
     buttonA: {
         backgroundColor: CORES.principal,
         padding: 20,
-       // marginTop: 10,
+        marginTop: 10,
         marginBottom: 20,
         alignItems: 'center',
+        borderRadius: 10,
     },
     buttonTextA: {
         color: CORES.branco,
@@ -144,6 +147,7 @@ const styles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 20,
         alignItems: 'center',
+        borderRadius: 10,
     },
     buttonText: {
         backgroundColor: CORES.branco,
