@@ -77,7 +77,6 @@ const styles = StyleSheet.create({
         fontSize: 14,
         width: '70%',
         color: CORES.branco,
-        //fontFamily: fontFamily.body,
         padding: 8,
     },
     button: {
@@ -92,7 +91,6 @@ const styles = StyleSheet.create({
     buttonText: {
         color: CORES.secundaria,
         fontSize: 24,
-        //fontFamily: fontFamily.subtitle,
     },
     buttonEsqueceu: {
         marginTop: 20,

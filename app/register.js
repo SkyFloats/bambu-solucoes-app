@@ -14,7 +14,6 @@ export default function Register(){
             alert('As senhas não coincidem');
             return;
         }
-        // Lógica de registro
     };
     return (
         <View style={styles.container}>
@@ -106,6 +105,5 @@ const styles = StyleSheet.create({
     buttonText: {
         color: CORES.secundaria,
         fontSize: 24,
-        //fontFamily: fontFamily.subtitle,
     },
 });

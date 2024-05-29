@@ -2,7 +2,6 @@ import { Link} from 'expo-router';
 import React from 'react';
 import { Image, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import CORES from '../../constants/cores' ;
-//import { fontFamily } from '../../assets/fonts/font-family';
 export default function ProjetosHome() {
     return (
         <View style={styles.container}>
@@ -31,7 +30,7 @@ export default function ProjetosHome() {
                         <Image style={styles.plus} source={require('../../assets/iconAdd.png')} />
                     </TouchableOpacity>
                 </Link>
-                <Link style={styles.buttonText} href='./HomeComProjetos' asChild>
+                <Link style={styles.buttonText} href='./context/testando' asChild>
                     <TouchableOpacity style={styles.button}>
                         <Image style={styles.plus} source={require('../../assets/iconAdd.png')} />
                     </TouchableOpacity>
@@ -57,22 +56,24 @@ const styles = StyleSheet.create({
         fontSize: 25,
         color: CORES.branco,
         marginLeft: 10,
-        //fontFamily: fontFamily.heading,
     },
     circleContainer: {
         alignItems: 'center',
         marginTop: '25%',
+        opacity: 0.9,
     },
     outerCircle: {
         borderWidth: 3,
         borderColor: CORES.principal,
         borderRadius: 100,
         padding: 5,
+        opacity: 0.9,
     },
     innerCircle: {
         backgroundColor: CORES.principal,
         borderRadius: 100,
         padding: 10,
+        opacity: 0.9,
     },
     image: {
         width: 100,
@@ -83,14 +84,14 @@ const styles = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         marginTop: 20,
-        //fontFamily: fontFamily.subtitle,
+        opacity: 0.9,
     },
     infoText: {
         color: CORES.principal,
         fontSize: 16,
         textAlign: 'center',
         marginTop: 10,
-        //fontFamily: fontFamily.body
+        opacity: 0.9,
     },
     button: {
         alignSelf: 'center',
