@@ -5,7 +5,7 @@ import CORES from '../../../constants/cores';
 import { DataContext } from './DataContext';
 
 const FormConclusao = () => {
-    const { clienteData, projetoData} = useContext(DataContext); // Use the context
+    const { clienteData, projetoData, setProjetoData} = useContext(DataContext); // Use the context
     const [detalhesFinais, setDetalhesFinais] = useState('');
 
     const handleFinalDetailsChange = (text) => {
@@ -44,7 +44,7 @@ const FormConclusao = () => {
                 onChangeText={handleFinalDetailsChange}
                 multiline
             />
-            <Link href='./FinalPage' asChild>
+            <Link href='./projetosHome' asChild>
                 <TouchableOpacity style={styles.button} onPress={saveFinalDetails}>
                     <Text style={styles.buttonText}>Finalizar</Text>
                 </TouchableOpacity>

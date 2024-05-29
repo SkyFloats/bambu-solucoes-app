@@ -30,7 +30,7 @@ export default function ProjetosHome() {
                         <Image style={styles.plus} source={require('../../assets/iconAdd.png')} />
                     </TouchableOpacity>
                 </Link>
-                <Link style={styles.buttonText} href='./context/testando' asChild>
+                <Link style={styles.buttonText} href='./HomeComProjetos' asChild>
                     <TouchableOpacity style={styles.button}>
                         <Image style={styles.plus} source={require('../../assets/iconAdd.png')} />
                     </TouchableOpacity>
