@@ -42,7 +42,7 @@ export default function DadosCliente() {
         value={clienteData.telefone}
         onChangeText={(text) => setClienteData({ ...clienteData, telefone: text })}
       />
-
+ 
       <Text style={styles.text}>Email</Text>
       <TextInput
         placeholder="Email do cliente"

@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
   },
   selectedChipText: {
     color: CORES.branco,
-  },
+  }, 
   roomItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',

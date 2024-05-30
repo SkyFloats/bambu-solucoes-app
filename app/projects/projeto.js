@@ -8,7 +8,7 @@ const ProjetoDetalhesScreen = () => {
       
       <Text style={styles.header}>- Projeto Casa de Praia</Text>
 
-      
+       
       <View style={styles.card}>
         <View style={styles.primaryTopic}>
           <Text style={styles.primary}>- Situação atual</Text>

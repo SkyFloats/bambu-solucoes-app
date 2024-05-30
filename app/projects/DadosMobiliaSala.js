@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
   arrow: {
     fontSize: 18,
     color: CORES.preto,
-  },
+  }, 
   dropdownContent: {
     padding: 15,
     backgroundColor: '#fafafa',

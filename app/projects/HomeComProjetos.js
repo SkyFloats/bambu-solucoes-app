@@ -11,7 +11,7 @@ const ProjectScreen = () => {
         endDate="05/2024" 
         progress={3} 
         pagina='./projetos/CasaDePraia'
-      />
+      /> 
       <ProjectCard 
         title="- Hotel Sem Fronteiras" 
         startDate="27/05/2023" 

@@ -111,6 +111,7 @@ export default function AdvancedInfo() {
           activeOpacity={0.8}
           onPress={saveState}
         >
+          
           <Text style={styles.buttonText}>Salvar e {"\n"} continuar</Text>
         </TouchableOpacity>
       </Link>

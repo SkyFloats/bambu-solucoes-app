@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 80,
     resizeMode: "contain",
-  },
+  }, 
   namePage: {
     flex: 1,
     fontSize: 25,
