@@ -76,16 +76,20 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     button: {
-        backgroundColor: CORES.principal,
-        padding: 16,
-        borderRadius: 8,
-        alignItems: 'center',
-        marginTop: 16,
-    },
-    buttonText: {
-        color: CORES.branco,
-        fontSize: 16,
-    },
+     backgroundColor: CORES.secundaria,
+     width: '90%',
+     borderRadius: 10,
+     height: 50,
+     margin: 'auto',
+     marginTop: 300,
+     justifyContent: 'center',
+     alignItems: 'center',
+     elevation: 6,
+   },
+     buttonText: {
+     color: CORES.branco,
+     fontWeight: 'bold',
+   },
 });
 
 export default FormConclusao;

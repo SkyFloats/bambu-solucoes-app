@@ -29,7 +29,7 @@ export default function AdvancedInfo() {
             style={styles.checkbox}
             value={checkboxes.restricoes}
             onValueChange={(value) => setCheckbox("restricoes", value)}
-            color={checkboxes.restricoes ? CORES.principal : undefined}
+            color={checkboxes.restricoes ? CORES.secundaria : undefined}
           />
         </View>
         <View style={styles.row}>
@@ -38,7 +38,7 @@ export default function AdvancedInfo() {
             style={styles.checkbox}
             value={checkboxes.sustentabilidade}
             onValueChange={(value) => setCheckbox("sustentabilidade", value)}
-            color={checkboxes.sustentabilidade ? CORES.principal : undefined}
+            color={checkboxes.sustentabilidade ? CORES.secundaria : undefined}
           />
         </View>
         <View style={styles.row}>
@@ -47,7 +47,7 @@ export default function AdvancedInfo() {
             style={styles.checkbox}
             value={checkboxes.acessibilidade}
             onValueChange={(value) => setCheckbox("acessibilidade", value)}
-            color={checkboxes.acessibilidade ? CORES.principal : undefined}
+            color={checkboxes.acessibilidade ? CORES.secundaria : undefined}
           />
         </View>
       </View>
@@ -61,7 +61,7 @@ export default function AdvancedInfo() {
             style={styles.checkbox}
             value={checkboxes.ventilacaoNatural}
             onValueChange={(value) => setCheckbox("ventilacaoNatural", value)}
-            color={checkboxes.ventilacaoNatural ? CORES.principal : undefined}
+            color={checkboxes.ventilacaoNatural ? CORES.secundaria : undefined}
           />
         </View>
         <View style={styles.row}>
@@ -70,7 +70,7 @@ export default function AdvancedInfo() {
             style={styles.checkbox}
             value={checkboxes.isolamentoAcustico}
             onValueChange={(value) => setCheckbox("isolamentoAcustico", value)}
-            color={checkboxes.isolamentoAcustico ? CORES.principal : undefined}
+            color={checkboxes.isolamentoAcustico ? CORES.secundaria : undefined}
           />
         </View>
         <View style={styles.row}>
@@ -82,7 +82,7 @@ export default function AdvancedInfo() {
               setCheckbox("eficienciaEnergetica", value)
             }
             color={
-              checkboxes.eficienciaEnergetica ? CORES.principal : undefined
+              checkboxes.eficienciaEnergetica ? CORES.secundaria : undefined
             }
           />
         </View>
@@ -92,7 +92,7 @@ export default function AdvancedInfo() {
             style={styles.checkbox}
             value={checkboxes.iluminacaoNatural}
             onValueChange={(value) => setCheckbox("iluminacaoNatural", value)}
-            color={checkboxes.iluminacaoNatural ? CORES.principal : undefined}
+            color={checkboxes.iluminacaoNatural ? CORES.secundaria : undefined}
           />
         </View>
         <View style={styles.row}>
@@ -101,7 +101,7 @@ export default function AdvancedInfo() {
             style={styles.checkbox}
             value={checkboxes.ventilacao}
             onValueChange={(value) => setCheckbox("ventilacao", value)}
-            color={checkboxes.ventilacao ? CORES.principal : undefined}
+            color={checkboxes.ventilacao ? CORES.secundaria : undefined}
           />
         </View>
       </View>
@@ -112,7 +112,7 @@ export default function AdvancedInfo() {
           onPress={saveState}
         >
           
-          <Text style={styles.buttonText}>Salvar e {"\n"} continuar</Text>
+          <Text style={styles.buttonText}>Salvar e continuar</Text>
         </TouchableOpacity>
       </Link>
     </View>
@@ -133,11 +133,11 @@ const styles = StyleSheet.create({
   },
   texto: {
     fontSize: 18,
-    color: CORES.principal,
+    color: CORES.secundaria,
     flex: 1,
   },
   checkbox: {
-    marginRight: 8,
+    marginRight: 10,
   },
   title: {
     backgroundColor: CORES.principal,
@@ -151,20 +151,20 @@ const styles = StyleSheet.create({
     color: CORES.branco,
     fontSize: 20,
     textAlign: "center",
+  }, 
+  button: {
+    backgroundColor: CORES.secundaria,
+    width: '90%',
+    borderRadius: 10,
+    height: 50,
+    margin: 'auto',
+    marginTop: 160,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 6,
   },
   buttonText: {
-    backgroundColor: CORES.branco,
-    color: CORES.secundaria,
-    width: 180,
-    height: 60,
-    borderRadius: 5,
-    textAlign: "center",
-    padding: 10,
-    marginTop: "10%",
-    marginLeft: "50%",
-  },
-  button: {
-    alignSelf: "center",
-    marginTop: 20,
+    color: CORES.branco,
+    fontWeight: 'bold',
   },
 });

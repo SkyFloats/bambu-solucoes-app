@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import {
 View,
   Text,
-  Image,
   StyleSheet,
   TextInput,
   TouchableOpacity,
@@ -75,7 +74,7 @@ export default function DadosProjeto() {
 
       <Link href="./DadosAmbiente" asChild>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Salvar e {"\n"} continuar</Text>
+          <Text style={styles.buttonText}>Salvar e continuar</Text>
         </TouchableOpacity>
       </Link>
     </View>
@@ -86,7 +85,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#EEEEEE",
-    left: 15,
   },
   input: {
     borderRadius: 10,
@@ -94,44 +92,27 @@ const styles = StyleSheet.create({
     color: CORES.branco,
     height: 40,
     marginTop: 5,
+    margin: 'auto',
     marginBottom: 12,
-    marginLeft: "2%",
     paddingLeft: 10,
     fontSize: 16,
     width: "90%",
   },
-  cabecalho: {
-    position: "relative",
-    backgroundColor: CORES.secundaria,
-    flexDirection: "row",
-    alig: "center",
-    height: "10%",
-  },
-  imagem: {
-    alignSelf: "center",
-    justifyContent: "center",
-    marginTop: "7%",
-    width: 60,
-    height: 80,
-    resizeMode: "contain",
-  }, 
-  namePage: {
-    flex: 1,
-    fontSize: 25,
-    color: CORES.branco,
-    marginTop: "11%",
-    marginLeft: "",
-  },
-  button: {
-    backgroundColor: CORES.branco,
-    width: "40%",
-    borderRadius: 5,
-    marginTop: "10%",
-    marginLeft: "2%",
-    paddingBottom: 6,
-    justifyContent: "center",
-    alignItems: "center",
-  },
+ button: {
+  backgroundColor: CORES.secundaria,
+  width: '90%',
+  borderRadius: 10,
+  height: 50,
+  margin: 'auto',
+  marginTop: 300,
+  justifyContent: 'center',
+  alignItems: 'center',
+  elevation: 6,
+},
+  buttonText: {
+  color: CORES.branco,
+  fontWeight: 'bold',
+},
   text: {
     fontWeight: "bold",
     color: CORES.cinza,

@@ -10,8 +10,8 @@ const roomItems = [
 ];
 
 const chipItemsChao = [
-  'Tapete', 'Sofá', 'Raque', 'Mesa Centro', 'Poltrona', 'Mesa Lateral', 
-  'Puff', 'Banco', 'Cadeiras', 'Vasos', 'Futon', 'Cadeiras'
+  'Tapete', 'Sofá', 'Raque','Vasos', 'Mesa Centro', 'Poltrona', 'Puff', 
+  'Banco', 'Cadeiras',  'Futon', 'Bancos', 'Mesa Lateral', 
 ];
 
 const chipItemsParede = [
@@ -71,32 +71,28 @@ const GreenCardScreen = () => {
         chipType = '';
     }
 
-    const renderChipsInMatrix = (chips, type) => {
-      const rows = [];
-      for (let i = 0; i < chips.length; i += 3) {
-        rows.push(
-          <View key={i} style={styles.chipRow}>
-            {chips.slice(i, i + 3).map((chip, chipIndex) => (
-              <TouchableOpacity 
-                key={chipIndex} 
-                style={[
-                  styles.chip, 
-                  selectedChips[type].includes(chip) && styles.selectedChip
-                ]}
-                onPress={() => handleChipPress(chip, type)}
-              >
-                <Text style={[
-                  styles.chipText,
-                  selectedChips[type].includes(chip) && styles.selectedChipText
-                ]}>
-                  {chip}
-                </Text>
-              </TouchableOpacity>
-            ))}
-          </View>
-        );
-      }
-      return rows;
+    const renderChips = (chips, type) => {
+      return (
+        <View style={styles.chipsContainer}>
+          {chips.map((chip, chipIndex) => (
+            <TouchableOpacity 
+              key={chipIndex} 
+              style={[
+                styles.chip, 
+                selectedChips[type].includes(chip) && styles.selectedChip
+              ]}
+              onPress={() => handleChipPress(chip, type)}
+            >
+              <Text style={[
+                styles.chipText,
+                selectedChips[type].includes(chip) && styles.selectedChipText
+              ]}>
+                {chip}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      );
     };
 
     return (
@@ -107,7 +103,7 @@ const GreenCardScreen = () => {
         </TouchableOpacity>
         {expandedIndex === index && (
           <View style={styles.dropdownContent}>
-            {renderChipsInMatrix(chipItems, chipType)}
+            {renderChips(chipItems, chipType)}
           </View>
         )}
       </View>
@@ -122,8 +118,8 @@ const GreenCardScreen = () => {
       </View>
 
       <Link style={styles.buttonText} href='./context/testando' asChild>
-        <TouchableOpacity style={styles.button}>
-          <Text> Salvar e {'\n'} cotinuar </Text>
+      <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}> Salvar e continuar </Text>
         </TouchableOpacity>
       </Link> 
     </ScrollView>
@@ -174,45 +170,45 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginBottom: 10,
   },
-  chipRow: {
+  chipsContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginBottom: 10,
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
   },
   chip: {
     borderWidth: 1,
-    borderColor: '#ccc',
+    borderColor: CORES.principal,
     borderRadius: 30,
     paddingVertical: 10,
     paddingHorizontal: 15,
+    backgroundColor: CORES.branco,
+    elevation: 6,
     margin: 5,
-    alignItems: 'center',
-    backgroundColor: '#fff',
   },
   selectedChip: {
     backgroundColor: CORES.secundaria,
     borderColor: CORES.secundaria,
   },
   chipText: {
-    color: '#000',
+    color: CORES.preto,
   },
   selectedChipText: {
-    color: '#fff',
+    color: CORES.branco,
   },
   button: {
-    position: 'absolute',
-    bottom: 20,
-    right: 20,
-    backgroundColor: CORES.branco,
-    width: 180,
-    height: 45,
-    borderRadius: 5,
+    backgroundColor: CORES.secundaria,
+    width: '90%',
+    borderRadius: 10,
+    height: 50,
+    margin: 'auto',
+    bottom: 30,
     justifyContent: 'center',
     alignItems: 'center',
+    elevation: 6,
   },
   buttonText: {
-    color: CORES.secundaria,
-    textAlign: 'center',
+    color: CORES.branco,
+    fontWeight: 'bold',
   },
 });
 

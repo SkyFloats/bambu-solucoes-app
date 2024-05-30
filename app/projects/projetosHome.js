@@ -35,6 +35,12 @@ export default function ProjetosHome() {
                         <Image style={styles.plus} source={require('../../assets/iconAdd.png')} />
                     </TouchableOpacity>
                 </Link>
+                <Link style={styles.buttonText} href='./TelaSobreProjetos' asChild>
+                    <TouchableOpacity style={styles.button}>
+                        <Image style={styles.plus} source={require('../../assets/iconAdd.png')} />
+                    </TouchableOpacity>
+                </Link> 
+                
             </View>
         </View>
     );

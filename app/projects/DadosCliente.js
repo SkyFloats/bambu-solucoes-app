@@ -52,12 +52,12 @@ export default function DadosCliente() {
         onChangeText={(text) => setClienteData({ ...clienteData, email: text })}
       />
 
-      <Link style={styles.buttonText} href='./DadosProjeto' asChild>
+      <Link style={styles.button} href='./DadosProjeto' asChild>
           <TouchableOpacity 
           style={styles.button}
           activeOpacity={0.8}
           onPress={saveState}>
-              <Text style={styles.buttonText}> Salvar e {'\n'} continuar </Text>
+              <Text style={styles.buttonText}> Salvar e continuar </Text>
           </TouchableOpacity>
       </Link>
     </View>
@@ -69,7 +69,6 @@ const styles = StyleSheet.create({
   container:{
     flex:1,
     backgroundColor:'#EEEEEE',
-    left: 15,
 },
   input:{
     borderRadius: 10,
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
     height: 40,
     marginTop: 5,
     marginBottom:12,
-    marginLeft: '2%',
+    margin: 'auto',
     paddingLeft: 10,
     fontSize: 16,
     width: '90%',
@@ -98,15 +97,20 @@ imagem: {
   height: 80, 
   resizeMode: 'contain',
 },
-button:{
-  backgroundColor: CORES.branco,
-  width: '40%',
-  borderRadius:5,
-  marginTop:'10%',
-  marginLeft: '2%',
-  paddingBottom: 6,
+button: {
+  backgroundColor: CORES.secundaria,
+  width: '90%',
+  borderRadius: 10,
+  height: 50,
+  margin: 'auto',
+  marginTop: 400,
   justifyContent: 'center',
   alignItems: 'center',
+  elevation: 6,
+},
+buttonText: {
+  color: CORES.branco,
+  fontWeight: 'bold',
 },
 text: {
   fontWeight: 'bold',
