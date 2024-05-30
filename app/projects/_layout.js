@@ -14,6 +14,7 @@ export default () => {
           headerTintColor: CORES.branco,
         }}
       >
+        
         <Stack.Screen name="projetosHome" options={{ headerShown: false }} />
       </Stack>
     </DataProvider>
