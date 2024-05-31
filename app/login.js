@@ -23,7 +23,6 @@ export default function Login() {
                     keyboardType="email-address"
                     autoCapitalize="none"
                 />
-
                 <TextInput 
                     placeholder="Senha" 
                     placeholderTextColor={CORES.branco} 
@@ -37,7 +36,7 @@ export default function Login() {
                     </TouchableOpacity> 
                 </Link>
 
-                <Link href='./esqueci' asChild>
+                <Link href='./EsqueciSenha' asChild>
                     <TouchableOpacity style={styles.buttonEsqueceu} activeOpacity={0.8}> 
                         <Text style={styles.esqueceuText}>Esqueceu a{'\n'}senha?</Text>
                     </TouchableOpacity>
