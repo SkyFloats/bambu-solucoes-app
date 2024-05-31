@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import CORES from '../../constants/cores';
 
 const AgendaScreen = () => {
   const month = 'Julho';
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#eee',
+    backgroundColor: CORES.branco,
   },
   header: {
     alignItems: 'flex-start',
@@ -140,7 +141,7 @@ const styles = StyleSheet.create({
   selectionText: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#3A5340',
+    color: CORES.secundaria,
     marginVertical: 5,
   },
   buttonsContainer: {
@@ -149,7 +150,7 @@ const styles = StyleSheet.create({
   },
   actionButton: {
     backgroundColor: '#3A5340',
-    color: '#3A5340',
+    color: CORES.secundaria,
     paddingVertical: 2,
     paddingHorizontal: 30,
     borderRadius: 10,

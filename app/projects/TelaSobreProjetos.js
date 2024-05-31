@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#eee',
+    backgroundColor: CORES.branco,
   },
   header: {
     display: 'flex',
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     bottom: 40,
   },
   innerButtonText: {
-    color: '#3A5340',
+    color: CORES.secundaria,
     fontWeight: 'bold',
     textAlign: 'center',
   },
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   createTaskButton: {
-    backgroundColor: '#3A5340',
+    backgroundColor: CORES.secundaria,
     padding: 10,
     borderRadius: 16,
     width: '48%',
@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
     height: 45,
   },
   deleteTaskButton: {
-    backgroundColor: '#D16A47',
+    backgroundColor: CORES.terciaria,
     padding: 10,
     borderRadius: 16,
     width: '48%',

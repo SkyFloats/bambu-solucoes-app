@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#eee',
+    backgroundColor: CORES.branco,
   },
   card: {
     width: '95%',
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 15,
     marginBottom: 10,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: CORES.branco,
   },
   roomItemText: {
     fontSize: 18,

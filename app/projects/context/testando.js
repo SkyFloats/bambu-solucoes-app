@@ -56,7 +56,7 @@ const FormConclusao = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#eeeeee',
+        backgroundColor: CORES.branco,
         padding: 16,
     },
     heading: {

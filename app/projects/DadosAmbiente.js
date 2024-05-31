@@ -122,7 +122,7 @@ export default function AdvancedInfo() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#eeeeee",
+    backgroundColor: CORES.branco,
     paddingHorizontal: 20,
     top: 10,
   },

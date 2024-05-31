@@ -84,7 +84,7 @@ export default function DadosProjeto() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#EEEEEE",
+    backgroundColor: CORES.branco,
   },
   input: {
     borderRadius: 10,
