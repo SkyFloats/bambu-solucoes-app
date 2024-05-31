@@ -6,11 +6,26 @@ import { DataContext } from './context/DataContext';
 
 export default function DadosCliente() {
   const { clienteData, setClienteData } = useContext(DataContext);
+  const [telefoneValido, setTelefoneValido] = useState(true);
+
+  const validateTelefone = (text) => {
+    const reg = /^\(\d{2}\) \d{5}-\d{4}$/;
+    if (reg.test(text) === false) {
+      setTelefoneValido(false);
+    } else {
+      setTelefoneValido(true);
+    }
+    setClienteData({ ...clienteData, telefone: text });
+  };
 
   const saveState = () => {
-    setClienteData({
-      ...clienteData,
-    });
+    if (telefoneValido) {
+      setClienteData({
+        ...clienteData,
+      });
+    } else {
+      alert('Por favor, insira um número de telefone válido.');
+    }
   };
   return (  
     <View style={styles.container}>
@@ -38,10 +53,14 @@ export default function DadosCliente() {
       <TextInput
         placeholder="Telefone do cliente"
         placeholderTextColor={CORES.branco}
-        style={styles.input}
+        style={[styles.input, !telefoneValido && styles.inputError]}
         value={clienteData.telefone}
-        onChangeText={(text) => setClienteData({ ...clienteData, telefone: text })}
+        onChangeText={validateTelefone}
+        maxLength={11}
       />
+      {!telefoneValido && (
+        <Text style={styles.errorText}>Formato de telefone inválido. Use (XX) 9XXXX-XXXX.</Text>
+      )}
  
       <Text style={styles.text}>Email</Text>
       <TextInput
@@ -103,7 +122,7 @@ button: {
   borderRadius: 10,
   height: 50,
   margin: 'auto',
-  marginTop: 400,
+  marginTop: '60%',
   justifyContent: 'center',
   alignItems: 'center',
   elevation: 6,
@@ -117,5 +136,14 @@ text: {
   color: CORES.cinza,
   marginTop: 5,
   marginLeft: '2%',
+},
+inputError: {
+  borderColor: 'red',
+},
+errorText: {
+  color: 'red',
+  marginBottom: 16,
+
+  alignSelf: 'center',
 },
 });

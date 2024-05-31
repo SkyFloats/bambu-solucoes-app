@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 50,
     margin: 'auto',
-    marginTop: 160,
+    marginTop: '10%',
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 6,

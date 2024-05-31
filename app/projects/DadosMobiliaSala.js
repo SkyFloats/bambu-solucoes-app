@@ -117,7 +117,7 @@ const GreenCardScreen = () => {
         {roomItems.map((item, index) => renderRoomItem(item, index))}
       </View>
 
-      <Link style={styles.buttonText} href='./context/testando' asChild>
+      <Link style={styles.buttonText} href='./context/ConfirmarDados' asChild>
       <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}> Salvar e continuar </Text>
         </TouchableOpacity>
@@ -201,7 +201,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 50,
     margin: 'auto',
-    bottom: 30,
+    bottom: '10%',
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 6,
