@@ -1,31 +1,35 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { Stack } from "expo-router";
 import CORES from "../../../constants/cores";
 import Checkbox from "expo-checkbox";
 import ButtonLink from "../../components/button/ButtonLink";
-import { DataContext } from "./Context/DataContext";
-import { useContext } from "react";
+import { GlobalDataContext } from "./Context/GlobalContext";
 import StylesAmbiente from "./ProjectsStyles/DadosAmbienteStyle";
 
-
 export default function AdvancedInfo() {
-  const { checkboxes, setCheckbox, projetoData, setProjetoData } =
-    useContext(DataContext);
-
+  const { projeto, setProjeto, checkboxes, setCheckboxes } = useContext(GlobalDataContext);
+  
+  const setCheckbox = (name, value) => {
+    setCheckboxes((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
   const saveState = () => {
-    setProjetoData({
-      ...projetoData,
+    setProjeto({
+      ...projeto,
       ...checkboxes,
     });
   };
   return (
-
     <View style={StylesAmbiente.container}>
       <Stack.Screen options={{ title: "Dados do Ambiente" }} />
       <View>
         <TouchableOpacity style={StylesAmbiente.title}>
-          <Text style={StylesAmbiente.titleText}>CARACTERÍSTICAS DO PROJETO</Text>
+          <Text style={StylesAmbiente.titleText}>
+            CARACTERÍSTICAS DO PROJETO
+          </Text>
         </TouchableOpacity>
         <View style={StylesAmbiente.row}>
           <Text style={StylesAmbiente.texto}>Contém restrições?</Text>
@@ -57,7 +61,9 @@ export default function AdvancedInfo() {
       </View>
       <View>
         <TouchableOpacity style={StylesAmbiente.title}>
-          <Text style={StylesAmbiente.titleText}>CARACTERÍSTICAS DO AMBIENTE</Text>
+          <Text style={StylesAmbiente.titleText}>
+            CARACTERÍSTICAS DO AMBIENTE
+          </Text>
         </TouchableOpacity>
         <View style={StylesAmbiente.row}>
           <Text style={StylesAmbiente.texto}>Ventilação natural?</Text>
@@ -96,7 +102,7 @@ export default function AdvancedInfo() {
             value={checkboxes.iluminacaoNatural}
             onValueChange={(value) => setCheckbox("iluminacaoNatural", value)}
             color={checkboxes.iluminacaoNatural ? CORES.secundaria : undefined}
-            style={StylesAmbiente.checkbox} 
+            style={StylesAmbiente.checkbox}
           />
         </View>
         <View style={StylesAmbiente.row}>
@@ -110,8 +116,11 @@ export default function AdvancedInfo() {
         </View>
       </View>
 
-      <ButtonLink href="./DadosMobilia" text={"Salvar e continuar"} 
-      onPress={saveState}/>
+      <ButtonLink
+        href="./DadosMobilia"
+        text={"Salvar e continuar"}
+        onPress={saveState}
+      />
     </View>
   );
 }

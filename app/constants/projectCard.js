@@ -1,32 +1,28 @@
-import React, { useContext } from "react";
+import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { Link } from "expo-router";
 import CORES from "./cores";
 import { Bar } from "react-native-progress";
 
-const ProjectCard = () => {
-
+const ProjectCard = ({projetoInfo, progress}) => {
   return (
-    <Link style={styles.card}>
-      <View>
-        <Text style={styles.title}>{projetoInfo.titulo}</Text>
-        <View style={styles.progressContainer}>
-          <Text style={styles.phaseText}>Fase inicial</Text>
-          <Text style={styles.progressText}>0%</Text>
-        </View>
-        <Bar
-          progress={0 / 100}
-          width={null}
-          color="#D16A47"
-          unfilledColor="#CC8879"
-          borderWidth={0}
-          height={20}
-          style={styles.progressBar}
-        />
-        <Text style={styles.dateText}>Início: {new Date().toLocaleDateString()}</Text>
-        <Text style={styles.dateText}>Previsão de entrega: {new Date().toLocaleDateString()}</Text>
+    <View style={styles.card}>
+      <Text style={styles.title}>{projetoInfo.titulo}</Text>
+      <View style={styles.progressContainer}>
+        <Text style={styles.phaseText}>Fase inicial</Text>
+        <Text style={styles.progressText}>{progress}%</Text>
       </View>
-    </Link>
+      <Bar 
+        progress={progress / 100} 
+        width={null} 
+        color="#D16A47" 
+        unfilledColor="#CC8879" 
+        borderWidth={0}
+        height={20}
+        style={styles.progressBar}
+      />
+      <Text style={styles.dateText}>Início: {new Date().toLocaleDateString()}</Text>
+      <Text style={styles.dateText}>Previsão de entrega {new Date().toLocaleDateString()}</Text>
+    </View>
   );
 };
 

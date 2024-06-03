@@ -1,8 +1,8 @@
 import React, { createContext, useState } from "react";
+import { GlobalDataContext } from "./GlobalContext";
 
-export const DataContext = createContext();
 
-export const DataProvider = ({ children }) => {
+export const DadosProjeto = () => {
   const [clienteData, setClienteData] = useState({
     nome: "",
     endereco: "",

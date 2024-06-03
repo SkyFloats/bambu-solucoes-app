@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Image, View, Text } from 'react-native';
 import ButtonPlus from '../../components/button/ButtonPlus';
 import StylesProjetoHome from './ProjectsStyles/ProjetosHomeStyle';
 export default function ProjetosHome() {

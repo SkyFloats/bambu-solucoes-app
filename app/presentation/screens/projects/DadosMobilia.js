@@ -65,7 +65,7 @@ const MultiSelectChips = () => {
         keyExtractor={(item) => item.name}
         contentContainerStyle={styles.roomItemsContainer}
       />
-      <Link href='./HomeComProjetos' asChild>
+      <Link href='./ConfirmarDados' asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}> Salvar e continuar </Text>
         </TouchableOpacity>

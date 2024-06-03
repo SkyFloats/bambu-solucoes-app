@@ -1,15 +1,32 @@
-import React , {useContext} from "react";
+import React, { useContext, useState } from "react";
 import { View } from "react-native";
-import { Stack } from "expo-router";
-
+import { Stack, router } from "expo-router";
 import ButtonLink from "../../components/button/ButtonLink";
-import { DataContext } from "./Context/DataContext";
 import StylesClient from "./ProjectsStyles/DadosClienteStyle";
 import InputLink from "../../components/input/InputLink";
-
+import { GlobalDataContext } from "./Context/GlobalContext";
 
 export default function DadosCliente() {
-  const { clienteData, setClienteData } = useContext(DataContext);
+  const { projeto, setProjeto, cliente, setCliente } =
+    useContext(GlobalDataContext);
+
+  const handleInputChange = (name, value) => {
+    setCliente((prevCliente) => ({
+      ...prevCliente,
+      [name]: value,
+    }));
+  };
+
+  const saveProjeto = () => {
+    const updatedProjeto = {
+      ...projeto,
+      cliente,
+    };
+
+    setProjeto(updatedProjeto);
+    router.push("/DadosProjeto");
+  };
+
   return (
     <View style={StylesClient.container}>
       <Stack.Screen options={{ title: "Dados do Cliente" }} />
@@ -17,17 +34,15 @@ export default function DadosCliente() {
         placeholder={"Nome do cliente"}
         text={"Nome"}
         style={StylesClient.input}
-        value={clienteData.nome}
-        onChangeText={(text) => setClienteData({ ...clienteData, nome: text })}
+        value={cliente.nome}
+        onChangeText={(text) => handleInputChange("nome", text)}
       />
 
       <InputLink
         placeholder={"Endereço do cliente"}
         text={"Endereço"}
-        value={clienteData.endereco}
-        onChangeText={(text) =>
-          setClienteData({ ...clienteData, endereco: text })
-        }
+        value={cliente.endereco}
+        onChangeText={(text) => handleInputChange("endereco", text)}
       />
 
       <InputLink
@@ -35,17 +50,21 @@ export default function DadosCliente() {
         text={"Telefone"}
         keyboardType="phone-pad"
         maxLength={11}
-        value={clienteData.telefone}
-        onChangeText={(text) => setClienteData({ ...clienteData, telefone: text })}
+        value={cliente.telefone}
+        onChangeText={(text) => handleInputChange("telefone", text)}
       />
       <InputLink
         placeholder={"Email do cliente"}
         text={"Email"}
         keyboardType="email-address"
-        value={clienteData.email}
-        onChangeText={(text) => setClienteData({ ...clienteData, email: text })}
+        value={cliente.email}
+        onChangeText={(text) => handleInputChange("email", text)}
       />
-      <ButtonLink href="./DadosProjeto" text="Salvar e continuar" />
+      <ButtonLink
+        onPress={saveProjeto}
+        href="./DadosProjeto"
+        text="Salvar e continuar"
+      />
     </View>
   );
 }
