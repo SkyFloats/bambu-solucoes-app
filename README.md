@@ -1,13 +1,11 @@
-# Expo Router Example
+# Projeto Mobile - Bambu Soluções
 
-Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native navigation using files in the `app/` directory.
+Um aplicativo mobile usando React Native para uma empresa de arquitetura
 
-## 🚀 How to use
+## Ferramentas
 
-```sh
-npx create-expo-app -e with-router
-```
+Foi usado React Native, Expo, Expo-Routes, Styled Components dentre outras bibliotecas para ajudar no desenvolvimento. O aplicativo foi testado em seu desenvolvimento usando o android studio.
 
-## 📝 Notes
+## Resultado
 
-- [Expo Router: Docs](https://docs.expo.dev/router/introduction/)
+Foi criado o front-end de modelo da aplicação com tela de login, criação de perfil, recuperação de senha, e o fluxo de tela do preenchimento das informações do cliente com telas de formularios interativas, como também uma pagina demonstrando como essas informações ficariam salvas, e uma tela para um calendario para futuras implementações de data relacionado aos projetos em andamento.
